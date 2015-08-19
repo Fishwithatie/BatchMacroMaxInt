@@ -22,6 +22,9 @@ function processFile(input, output, file) {
 	open("" + input + file);
 	run("Z Project...", "projection=[Max Intensity]");
 	saveAs("Tiff", "" + output + file);
+	
+	//2 windows to close, main LSM file and MAX Intensity projection created by processFile function. 2 close() required in order to keep everything stable.
+
 	close();
 	close();
 
